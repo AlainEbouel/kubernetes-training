@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-green
+  labels:
+    app: web
+spec:
+  containers:
+  - name: pod-green
+    image: mmumshad/simple-webapp-color
+    ports:
+      - containerPort: 8080
+    env:
+      - name: APP_COLOR
+        value: green
+
